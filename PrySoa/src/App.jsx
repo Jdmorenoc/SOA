@@ -12,10 +12,10 @@ function App(){
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<HomeHooks/>}></Route> 
+        <Route path='/homehooks' element={<HomeHooks/>}></Route> 
         <Route path='/saludar' element={<Saludar/>}></Route> 
         <Route path='/usestate' element={<HookUseState/>}></Route> 
-        <Route path='/usenavegate' element={<HookUseNavigate/>}></Route> 
+        <Route path='/navigate' element={<HookUseNavigate/>}></Route> 
       </Routes>
     </BrowserRouter>
   )

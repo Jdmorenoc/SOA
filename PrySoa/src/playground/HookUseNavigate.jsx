@@ -1,27 +1,15 @@
-function HookUseNavigate(){
-    
-    const irAlHome = () => {
-        navigate("/");
-    }
-    
-        const parte1 = () => {
-        navigate("/");
-    }
+import { useNavigate } from "react-router-dom";
+function HookUseNavigate() {
+  const navigate = useNavigate();
 
-        const parte2 = () => {
-        navigate("/usestate");
-    }
-
-        const parte3 = () => {
-        navigate("/usenavegate");
-    }
-    
-    return(
-        <div>
-            <h1>HookUseNavigate</h1>
-            <button onClick={irAlHome}>Ir al Home</button>
-        </div>
-    )
+  return (
+    <div>
+      <h1>Bienvenido a navigate</h1>
+      <button onClick={() => navigate("/saludar")}>Ir al Saludar</button>
+      <button onClick={() => navigate("/usestate")}>Ir State</button>
+      <button onClick={() => navigate("/homehooks")}>Ir HomeHooks</button>
+    </div>
+  );
 }
 
 export default HookUseNavigate;
