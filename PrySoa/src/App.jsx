@@ -1,4 +1,8 @@
 import './App.css'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
+
+// COMPONENTES
 import HomeHooks from './playground/HomeHooks'
 import HookUseNavigate from './playground/HookUseNavigate'
 import HookUseState from './playground/HookUseState'
@@ -6,13 +10,14 @@ import Saludar from './playground/Component'
 
 function App(){
   return (
-    <>
-    <h1>Juan Moreno</h1>
-    <Saludar/>
-    <HomeHooks/>
-    <HookUseNavigate/>
-    <HookUseState/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomeHooks/>}></Route> 
+        <Route path='/saludar' element={<Saludar/>}></Route> 
+        <Route path='/usestate' element={<HookUseState/>}></Route> 
+        <Route path='/usenavegate' element={<HookUseNavigate/>}></Route> 
+      </Routes>
+    </BrowserRouter>
   )
 }
 
